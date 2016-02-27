@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language="javascript" type="text/javascript" src="jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="action.js" ></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" >
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="page_style.css" >
+
+<script>
+$(function() {
+    $( "#datepicker" ).datepicker();
+});
+</script>
+
+</head>
+
+<body>
+
+<div id="header">
+<h1>Web App Solutions</h1>
+</div>
+
+<div id="nav">
+<a href="addFeature.php">Add New Feature</a>
+<br>
+<a href="showFeature.php">Show Featues</a>
+</div>
+
+<div id="section">
+<h2 align="center">Add New Feature</h2>
+
+<table name="featureTable" cellspacing="5" cellpadding="5">
+
+<tr><td align="left">Title </td><td><input type="text" name="title" required />
+</td></tr>
+
+<tr><td align="left">Description </td><td><textarea name="description" rows="5" cols="40" required></textarea>
+</td></tr>
+
+<tr><td align="left">Client </td><td><select name="client">
+		<option value="">Select...</option>
+  		<option value="Client A">Client A</option>
+  		<option value="Client B">Client B</option>
+  		<option value="Client C">Client c</option>
+	</select>
+</td></tr>
+
+<tr><td align="left">Priority </td><td><input type="text" name="priority" />
+</td></tr>
+
+<tr><td align="left">Target Date </td><td><input type="text" name="target" id="datepicker" />
+</td></tr>
+
+<tr><td align="left">URL </td><td><input type="text" name="url" />
+</td></tr>
+
+<tr><td align="left">Product Area </td><td><select name="area">
+		<option value="">Select...</option>
+  		<option value="Policies">Policies</option>
+  		<option value="Billing">Billing</option>
+  		<option value="Claims">Claims</option>
+		<option value="Reports">Reports</option>
+	</select>
+</td></tr>
+</table>
+
+<table name="submitButton" align="center">
+<tr><td><input type="submit" name="submit" value="Submit" onclick="store_data()" /> </td></tr>
+</table>
+
+</div>
+<br>
+<div id="footer">
+Copyright © webapp.com
+</div>
+
+</body>
+</html>

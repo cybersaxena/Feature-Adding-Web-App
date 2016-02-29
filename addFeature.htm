@@ -10,7 +10,7 @@
 
 <script>
 $(function() {
-    $( "#datepicker" ).datepicker();
+    $("#datepicker").datepicker({ dateFormat: 'mm-dd-yy' });
 });
 </script>
 
@@ -23,9 +23,7 @@ $(function() {
 </div>
 
 <div id="nav">
-<a href="addFeature.php">Add New Feature</a>
-<br>
-<a href="showFeature.php">Show Featues</a>
+<a href="addFeature.htm"><b>Add New Feature</b></a><span style="display:inline-block; width: 20px;"></span><a href="showFeature.htm"><b>Show Features</b></a>
 </div>
 
 <div id="section">
@@ -33,36 +31,36 @@ $(function() {
 
 <table name="featureTable" cellspacing="5" cellpadding="5">
 
-<tr><td align="left">Title </td><td><input type="text" name="title" required />
+<tr><td align="left">Title </td><td><input type="text" name="title" id="title"/><label id="tl" style="color:red;"></label>
 </td></tr>
 
-<tr><td align="left">Description </td><td><textarea name="description" rows="5" cols="40" required></textarea>
+<tr><td align="left">Description </td><td><textarea name="description" id="description" rows="5" cols="40"></textarea><label id="dl" style="color:red;"></label>
 </td></tr>
 
-<tr><td align="left">Client </td><td><select name="client">
+<tr><td align="left">Client </td><td><select name="client" id="client" onchange="getPriority(this.id)">
 		<option value="">Select...</option>
   		<option value="Client A">Client A</option>
   		<option value="Client B">Client B</option>
-  		<option value="Client C">Client c</option>
-	</select>
+  		<option value="Client C">Client C</option>
+	</select><label id="cl" style="color:red;"></label>
 </td></tr>
 
-<tr><td align="left">Priority </td><td><input type="text" name="priority" />
+<tr><td align="left">Priority </td><td><input type="text" name="priority"  id="priority"/>&nbsp;<label id="p"></label><label id="pl" style="color:red;"></label>
 </td></tr>
 
-<tr><td align="left">Target Date </td><td><input type="text" name="target" id="datepicker" />
+<tr><td align="left">Target Date </td><td><input type="text" name="target" id="datepicker"/><label id="dtl" style="color:red;"></label>
 </td></tr>
 
-<tr><td align="left">URL </td><td><input type="text" name="url" />
+<tr><td align="left">URL </td><td><input type="text" name="url" id="url" />
 </td></tr>
 
-<tr><td align="left">Product Area </td><td><select name="area">
+<tr><td align="left">Product Area </td><td><select name="area" id="area">
 		<option value="">Select...</option>
   		<option value="Policies">Policies</option>
   		<option value="Billing">Billing</option>
   		<option value="Claims">Claims</option>
 		<option value="Reports">Reports</option>
-	</select>
+	</select><label id="al" style="color:red;"></label>
 </td></tr>
 </table>
 

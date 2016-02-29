@@ -1,24 +1,27 @@
 #header {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     background-color:black;
     color:white;
     text-align:center;
     padding:5px;
 }
 #nav {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     line-height:50px;
-    background-color:#eeeeee;
-    height:80vh;
-    width:150px;
+    background-color:lightblue;
+    width:100%;
     float:left;
     padding:5px;	      
 }
 #section {
-    width:500px;
-    float:left;
-    padding:10px;	 	 
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    float:center;
+    padding:5px;	 	 
 }
 #footer {
-    width:175vh;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
     background-color:black;
     color:white;
     clear:both;
@@ -26,24 +29,31 @@
     padding:5px;	 	 
 }
 
+
 /* unvisited link */
 a:link {
     color: red;
+
 }
 
 /* visited link */
 a:visited {
-    color: green;
+    color: navyblue;
+
 }
 
 /* mouse over link */
 a:hover {
     color: hotpink;
+    text-decoration: underline;
+ 
 }
 
 /* selected link */
 a:active {
     color: blue;
+    text-decoration: underline;
+
 }
 
 .error {color: #FF0000;}

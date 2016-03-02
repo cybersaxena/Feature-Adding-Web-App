@@ -9,19 +9,14 @@
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     line-height:50px;
     background-color:lightblue;
-    width:100%;
-    float:left;
-    padding:5px;	      
+    padding:5px;      
 }
 #section {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    width:100%;
-    float:center;
     padding:5px;	 	 
 }
 #footer {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    width:100%;
     background-color:black;
     color:white;
     clear:both;

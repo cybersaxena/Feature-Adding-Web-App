@@ -4,7 +4,7 @@ $q = $_GET["client_val"];
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "123";
 $db = "featureDB";
 $result = 1;
 

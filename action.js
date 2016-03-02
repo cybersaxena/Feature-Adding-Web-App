@@ -1,3 +1,72 @@
+function signin()
+{
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	if(username=="" || password==""){
+		alert("Please enter username and password.");
+		return;
+	}
+	jQuery.ajax({
+		method: "GET",
+		url: "login.php",
+		data: {usr:username, pass:password},
+		success: function(response){
+				if(response == "Username and password does not match. Try again."){
+					alert(response);
+				} 
+				else if(response == "true"){
+					window.open("addFeature.htm?username="+username,'_SELF');				}
+			},
+		error: function(data){
+			alert(data);
+		}
+	});
+}
+
+function check_login()
+{
+	var username = [];
+	username=document.location.search.split("username=");
+	if(username[1] == "")
+		window.open("login.htm",'_SELF');
+	else{
+		jQuery.ajax({
+		method: "GET",
+		url: "verifyLogin.php",
+		data: {usr:username[1]},
+		success: function(response){
+				if(response == "true"){
+					document.getElementById("username").innerHTML = username[1];
+				} 
+				else{
+					window.open("login.htm",'_SELF');
+				}
+			}
+		});
+			
+	}
+	var a = document.getElementById("af");
+	a.href = "addFeature.htm?username="+username[1];
+	var b = document.getElementById("sf");
+	b.href = "showFeature.htm?username="+username[1];
+
+}
+
+function log_out()
+{
+	var username = "";
+	var cookie_str = document.cookie.split('; ');
+	username = cookie_str[0].replace("username=", '');
+	jQuery.ajax({
+		method: "POST",
+		url: "logout.php",
+		data: {usr:username},
+		success: function(response){
+				window.open("login.htm",'_SELF');
+			}
+	});
+	
+}
 
 
 function store_data()

@@ -25,7 +25,7 @@ $q = $_GET["select_client"];
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "123";
 $db = "featureDB";
 $sql = "";
 
@@ -60,7 +60,7 @@ if ($q == '*'){
 	echo "<td>" . $row['client'] . "</td>";
     	echo "<td>" . $row['priority'] . "</td>";
     	echo "<td>" . $row['target'] . "</td>";
-    	echo "<td>" . $row['url'] . "</td>";
+    	echo "<td><a href=\"" . $row['url'] . "\">".$row['url']."</a></td>";
     	echo "<td>" . $row['area'] . "</td>";
     	echo "</tr>";
 	}

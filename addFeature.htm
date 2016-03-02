@@ -16,14 +16,14 @@ $(function() {
 
 </head>
 
-<body>
+<body onload="check_login()">
 
 <div id="header">
 <h1>Web App Solutions</h1>
 </div>
 
 <div id="nav">
-<a href="addFeature.htm"><b>Add New Feature</b></a><span style="display:inline-block; width: 20px;"></span><a href="showFeature.htm"><b>Show Features</b></a>
+<a id="af"><b>Add New Feature</b></a><span style="display:inline-block; width: 20px;"></span><a id="sf"><b>Show Features</b></a><span style="display:inline-block; width: 800px;"></span><b>Welcome <label id="username"></label><span style="display:inline-block; width: 10px;"></span><input type="submit" name="logout" value="Log out" onclick="log_out()" />
 </div>
 
 <div id="section">

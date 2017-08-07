@@ -1,4 +1,4 @@
-# WebApp1
+# Feature Adding Web App
 
 This web application allows IWS employee to add new "Feature Request" and display features those are added previously. First of all, the employee must be logged in the application. The default username and password goes here:
 

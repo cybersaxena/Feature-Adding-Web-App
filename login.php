@@ -3,7 +3,7 @@
 $user = $_GET["usr"];
 $passwrd = $_GET["pass"];
 
-$servername = "localhost";
+$servername = "mysql.phpwebapp.svc";
 $username = "root";
 $password = "123";
 $db = "featureDB";

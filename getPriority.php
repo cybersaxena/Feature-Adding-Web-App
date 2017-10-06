@@ -2,7 +2,7 @@
 
 $q = $_GET["client_val"];
 
-$servername = "localhost";
+$servername = "mysql.phpwebapp.svc";
 $username = "root";
 $password = "123";
 $db = "featureDB";

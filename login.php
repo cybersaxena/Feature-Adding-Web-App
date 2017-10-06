@@ -6,7 +6,7 @@ $passwrd = $_GET["pass"];
 $servername = "mysql.phpwebapp.svc";
 $username = "root";
 $password = "123";
-$db = "featureDB";
+$db = "featuredb";
 $sql = "select password from users where username='$user'";
 
 $conn = mysqli_connect($servername, $username, $password, $db);

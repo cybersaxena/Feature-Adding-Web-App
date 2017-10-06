@@ -23,7 +23,7 @@
 
 $q = $_GET["select_client"];
 
-$servername = "localhost";
+$servername = "mysql.phpwebapp.svc";
 $username = "root";
 $password = "123";
 $db = "featureDB";
